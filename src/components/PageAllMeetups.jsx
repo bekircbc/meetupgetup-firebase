@@ -20,7 +20,7 @@ export function PageAllMeetups() {
                 </div>
                 <div>
                   <h3>{meetup.title}</h3>
-                  <address>{meetup.adress}</address>
+                  <address>{meetup.address}</address>
                   <p>{meetup.description}</p>
                 </div>
                 <div>

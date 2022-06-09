@@ -1,3 +1,4 @@
+// import axios from "axios";
 import { useRef } from "react";
 
 export function PageNewMeetup() {
@@ -5,6 +6,7 @@ export function PageNewMeetup() {
   const imageInputRef = useRef();
   const addressInputRef = useRef();
   const descriptionInputRef = useRef();
+
   function submitHandler(event) {
     event.preventDefault();
     const enteredTitle = titleInputRef.current.value;
@@ -19,6 +21,15 @@ export function PageNewMeetup() {
       description: enteredDescription,
       isFavorite: false,
     };
+
+    // useEffect(() => {
+    //   (async () => {
+    //     await axios.post(
+    //       "https://meetupgetup-default-rtdb.firebaseio.com/meetups.json",
+    //       meetupData
+    //     );
+    //   })();
+    // }, []);
 
     fetch("https://meetupgetup-default-rtdb.firebaseio.com/meetups.json", {
       method: "POST",
