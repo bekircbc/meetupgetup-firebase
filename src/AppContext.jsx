@@ -24,7 +24,7 @@ export const AppProvider = ({ children }) => {
 
       setIsLoading(false);
     })();
-  }, [loadedMeetups]);
+  }, []);
 
   function toggleFavoriteStatusHandler(meetup) {
     meetup.isFavorite = !meetup.isFavorite;
