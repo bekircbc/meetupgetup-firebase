@@ -14,6 +14,6 @@
 
 ## Webpage Links
 
-- Netlify - [https://meetup-getup-app.netlify.app/]
+- Netlify - []
 
-- Vercel - [https://basic-streamingapp.vercel.app/]
+- Vercel
