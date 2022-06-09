@@ -3,8 +3,7 @@ import axios from "axios";
 
 export const AppContext = createContext();
 
-const firebaseUrl =
-  "https://basic-streaming-app-default-rtdb.firebaseio.com/meetups.json";
+const firebaseUrl = "https://meetupgetup-default-tdb.firebaseio.com/";
 
 export const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,6 +12,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       const firebaseObj = (await axios.get(firebaseUrl)).data;
+      console.log(firebaseObj);
       const _loadedMeetups = Object.entries(firebaseObj).map(
         (entry) => entry[1]
       );
